@@ -7,7 +7,7 @@ Studies that combine human answers with language model predictions size their hu
 ## Install
 
 ```
-pip install git+https://github.com/Nyxius-Labs/ppiplan
+pip install ppiplan
 ```
 
 ## Use
