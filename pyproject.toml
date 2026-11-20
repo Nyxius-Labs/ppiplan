@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ppiplan"
+version = "0.1.0"
+description = "Plan the human sample of a prediction-powered study without choosing a model on the pilot"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Jacob Crainic" }, { name = "Brandon Yee" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy"]
+
+[project.urls]
+Repository = "https://github.com/Nyxius-Labs/ppiplan"
