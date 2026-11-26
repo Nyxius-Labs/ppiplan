@@ -2,7 +2,7 @@
 
 Plan the human sample of a prediction-powered (mixed-subjects) study from a small pilot.
 
-Studies that combine human answers with language model predictions size their human sample from the pilot correlation between predictions and answers. Choosing the model, prompt or persona format with the highest pilot correlation and then planning with that same correlation makes the plan too optimistic: in our data the delivered correlation is about 0.12 lower and realized power falls from 0.80 to about 0.73. `ppiplan` plans with the average of standardized predictions from configurations fixed before the pilot, so the pilot is never used to choose, and it reports the power a study would have if the true correlation were lower.
+Studies that combine human answers with language model predictions size their human sample from the pilot correlation between predictions and answers. Choosing the model, prompt or persona format with the highest pilot correlation and then planning with that same correlation makes the plan too optimistic: in our data the delivered correlation is about 0.13 lower and realized power falls from 0.80 to about 0.73. `ppiplan` plans with the average of standardized predictions from configurations fixed before the pilot, so the pilot is never used to choose, and it reports the power a study would have if the true correlation were lower.
 
 ## Install
 

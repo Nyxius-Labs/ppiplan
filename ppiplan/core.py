@@ -46,12 +46,9 @@ def realized_power(rho_plan, rho_true, alpha=0.05, power=0.80):
 
 def plan(y_pilot, predictions_pilot, effect, sd=None, arm=None, alpha=0.05, power=0.80, lower_bound=False):
     y = np.asarray(y_pilot, float)
-    n = len(y)
     r = pilot_rho(y, predictions_pilot, arm)
-    rp = r
-    if lower_bound:
-        rp = float(np.tanh(np.arctanh(np.clip(r, -0.999, 0.999)) - norm.ppf(power) / np.sqrt(n - 3)))
-    rp = max(rp, 0.0)
+    rp = np.tanh(np.arctanh(np.clip(r, -0.999, 0.999)) - norm.ppf(power) / np.sqrt(len(y) - 3)) if lower_bound else r
+    rp = max(float(rp), 0.0)
     s = float(np.std(_demean(y, arm), ddof=1)) if sd is None else float(sd)
     za, zb = norm.ppf(1 - alpha / 2), norm.ppf(power)
     k = 4 if arm is not None else 1
